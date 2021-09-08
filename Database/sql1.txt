@@ -1,0 +1,35 @@
+CREATE TABLE users (student_name varchar(45), student_email varchar(40));
+CREATE TABLE codekata (student_name varchar(45), problem_solved integer(40));
+CREATE TABLE attendance (student_name varchar(45), attendance varchar(40));
+CREATE TABLE topics (student_name varchar(45), topics varchar(40));
+CREATE TABLE tasks (student_name varchar(45), tasks varchar(40));
+CREATE TABLE company_drive (student_name varchar(45), company varchar(40));
+CREATE TABLE mentors (student_name varchar(45), mentor varchar(40));
+CREATE TABLE students_activated_courses (student_name varchar(45), courseid varchar(40));
+CREATE TABLE courses (courseid varchar(45), coursename varchar(40));
+
+INSERT INTO users (student_name, student_email) VALUES ('Akanksha', 'Akanksha@mail.com'), ('Arya', 'Arya@mail.com'),('C','c@gmail.com'),('D','d@gmail.co),('E','e@gmail.com');
+
+INSERT INTO codekata (student_name, problem_solved) VALUES ('Akanksha', 52), ('Arya', 44),('C',65),('D',24),('E',98);
+
+INSERT INTO attendance (student_name, attendance) VALUES ('Akanksha', 52), ('Arya', 44),('C',65),('D',24),('E',98);
+
+INSERT INTO topics (student_name, topic) VALUES ('Akanksha', 'basics'), ('Arya', 'arrays'),('C','strings'),('D','maps'),('E','numbers');
+
+INSERT INTO tasks (student_name, task) VALUES ('Akanksha', 'basics'), ('Arya', 'arrays'),('C','strings'),('D','maps'),('E','numbers');
+
+INSERT INTO company_drive (student_name, company) VALUES ('Akanksha', 'facebook'), ('Arya', 'amazon'),('C','apple'),('D','maps'),('E','netflix');
+
+INSERT INTO mentor (student_name, mentor) VALUES ('Akanksha', 'U'), ('Arya', 'v'),('C','W'),('D','X'),('E','Y');
+
+INSERT INTO students_activated_courses (student_name, courseid) VALUES ('Akanksha', '1'), ('Arya', '2'),('C','3'),('D','4'),('E','5');
+
+INSERT INTO courses (courseid,coursename) VALUES ( '1','Web Development'), ('2','Android development'),('3','DSA'),('4','Machine Learning'),('5','DevOps');
+
+Select count(problem_solved) from users inner join codekata on users.student_name=codekata.student_name group by student_name
+
+select count(company) from company_drive group by student_name
+
+
+
+
